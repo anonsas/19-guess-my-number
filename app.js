@@ -11,7 +11,7 @@ let highScoreText = document.querySelector('.highscore');
 
 let score = 20;
 let highScore = 0;
-let randomNumber = Math.floor(Math.random() * 21);
+let randomNumber = Math.floor(Math.random() * 20) + 1;
 
 function gameHandler() {
   if (+guessNumber.value < 1 || +guessNumber.value > 20) {
@@ -40,7 +40,7 @@ function gameHandler() {
 }
 
 function repeatGameHandler() {
-  randomNumber = Math.floor(Math.random() * 21);
+  randomNumber = Math.floor(Math.random() * 20) + 1;
 
   score = 20;
   scoreText.textContent = score;
